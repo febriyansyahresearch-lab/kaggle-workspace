@@ -10,11 +10,11 @@ def load_data(filepath: str) -> pd.DataFrame:
 
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.drop_duplicates()
+    df = df.drop_duplicates().copy()
     for col in df.select_dtypes(include=[np.number]).columns:
-        df[col] = df[col].fillna(df[col].median())
+        df.loc[:, col] = df[col].fillna(df[col].median())
     for col in df.select_dtypes(include=[object]).columns:
-        df[col] = df[col].fillna(df[col].mode()[0] if not df[col].mode().empty else "UNKNOWN")
+        df.loc[:, col] = df[col].fillna(df[col].mode()[0] if not df[col].mode().empty else "UNKNOWN")
     return df
 
 
