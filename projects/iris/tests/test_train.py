@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from src.train import train_model, evaluate_model
+from projects.iris.src.train import train_model, evaluate_model
 
 
 def test_train_model_returns_rf():

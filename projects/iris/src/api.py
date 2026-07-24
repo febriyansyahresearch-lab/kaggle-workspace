@@ -1,11 +1,12 @@
 import joblib
 import numpy as np
+import os
 from pydantic import BaseModel
 from fastapi import FastAPI, HTTPException
 
-app = FastAPI(title="Kaggle Model API", version="1.0.0")
+app = FastAPI(title="Iris Classifier API", version="1.0.0")
 
-MODEL_PATH = "models/model.joblib"
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "model.joblib")
 model = None
 
 

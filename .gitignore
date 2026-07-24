@@ -14,11 +14,9 @@ build/
 *.npy
 *.pkl
 *.h5
-*.joblib
 data/
 input/
 output/
-models/
 checkpoints/
 
 # Jupyter

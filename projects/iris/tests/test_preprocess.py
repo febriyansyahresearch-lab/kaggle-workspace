@@ -1,7 +1,7 @@
 import pytest
 import pandas as pd
 import numpy as np
-from src.preprocess import clean_data, encode_categorical, split_data, scale_features
+from projects.iris.src.preprocess import clean_data, encode_categorical, split_data, scale_features
 
 
 def test_clean_data_removes_duplicates():
@@ -36,7 +36,6 @@ def test_split_data():
 
 
 def test_scale_features():
-    import numpy as np
     X_train = np.array([[1.0, 2.0], [3.0, 4.0]])
     X_test = np.array([[5.0, 6.0]])
     X_train_scaled, X_test_scaled, scaler = scale_features(X_train, X_test)
