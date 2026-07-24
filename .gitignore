@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Data Science
+*.csv
+*.xlsx
+*.json
+*.npz
+*.npy
+*.pkl
+*.h5
+*.joblib
+data/
+input/
+output/
+models/
+checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_metadata/
+
+# Kaggle
+kaggle.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
