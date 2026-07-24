@@ -1,5 +1,10 @@
 # Kaggle Project — ML Workspace
 
+[![CI](https://github.com/febriyansyahresearch-lab/kaggle-project/actions/workflows/test.yml/badge.svg)](https://github.com/febriyansyahresearch-lab/kaggle-project/actions)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-25%20passed-brightgreen)](projects/)
+
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
 Monorepo of ML/data science projects for Kaggle, Colab, VS Code, and GitHub Codespaces.
