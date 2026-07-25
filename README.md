@@ -16,7 +16,7 @@ Monorepo of ML/data science projects for Kaggle, Colab, VS Code, and GitHub Code
 | `projects/iris/` | Multi-class classification | RandomForest + FastAPI | 8 ✅ |
 | `projects/titanic/` | Binary classification | RandomForest (balanced) | 6 ✅ |
 | `projects/housing/` | Regression | Linear, RF, GBR | 6 ✅ |
-| `projects/clustering/` | Unsupervised (K-Means) | K-Means + PCA | 6 ✅ |
+| `projects/clustering/` | Unsupervised (K-Means) | K-Means + PCA | 5 ✅ |
 
 ## Setup
 
