@@ -1,7 +1,7 @@
 {
-  "id": "febriyansyahresearch/p01-pengantar-computer-vision",
-  "title": "P01 Pengantar Computer Vision",
-  "code_file": "p01-pengantar-computer-vision.ipynb",
+  "id": "febriyansyahresearch/p01-introduction-to-computer-vision",
+  "title": "P01 Introduction to Computer Vision",
+  "code_file": "p01-introduction-to-computer-vision.ipynb",
   "language": "python",
   "kernel_type": "notebook",
   "is_private": false,
