@@ -1,0 +1,12 @@
+{
+  "id": "febriyansyahresearch/classify-malimg",
+  "title": "Classify Malimg",
+  "code_file": "classify-malimg.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "competition_sources": [],
+  "dataset_sources": []
+}

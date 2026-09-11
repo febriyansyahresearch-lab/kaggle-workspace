@@ -1,85 +1,85 @@
-# Kaggle Workspace — ML & Data Science
-
-[![CI](https://github.com/febriyansyahresearch-lab/kaggle-workspace/actions/workflows/test.yml/badge.svg)](https://github.com/febriyansyahresearch-lab/kaggle-workspace/actions)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-25%20passed-brightgreen)](projects/)
+# NOTEBOOK-KAGGLE — Kaggle Notebooks by Collection
 
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
-Monorepo of ML/data science projects and Kaggle notebooks for Kaggle, Colab, VS Code, and GitHub Codespaces.
+Kumpulan 13 Kaggle notebooks terorganisir per collection (mirror dari Kaggle Collections). Setiap notebook berada di `<COLLECTION>/<slug>/` berisi `<slug>.ipynb` + `kernel-metadata.json`.
 
-## Projects
+## Structure
 
-| Project | Type | Model | Tests |
-|---|---|---|---|
-| `projects/iris/` | Multi-class classification | RandomForest + FastAPI | 8 ✅ |
-| `projects/titanic/` | Binary classification | RandomForest (balanced) | 6 ✅ |
-| `projects/housing/` | Regression | Linear, RF, GBR | 6 ✅ |
-| `projects/clustering/` | Unsupervised (K-Means) | K-Means + PCA | 5 ✅ |
+```
+NOTEBOOK-KAGGLE/
+├── AUTOMATION/           # 1 notebook
+│   └── auto-github-runner/
+├── CLASSIFICATION/       # 1 notebook
+│   └── classify-breast-cancer/
+├── COMPUTER-VISION/      # 3 notebooks (Collection: Computer Vision - 19123799)
+│   ├── classify-malimg/
+│   ├── vision-malevis-generator/
+│   └── vision-image-size-check/
+├── EDA/                  # 4 notebooks
+│   ├── eda-iris/
+│   ├── eda-titanic/
+│   ├── eda-housing/
+│   └── eda-customer-segmentation/
+├── EXPERIMENTS/          # 2 notebooks
+│   ├── exp-transformer-mamba/
+│   └── exp-transformer-test/
+├── NLP/                  # 2 notebooks
+│   ├── nlp-retail-chatbot-rag/
+│   └── nlp-retail-cs-ai/
+├── LICENSE
+└── README.md
+```
 
-## Kaggle Notebooks
+## Collections
 
-13 notebooks, each in its own folder under `notebooks/` (contains `<slug>.ipynb` + `kernel-metadata.json`), following the naming convention documented in [`docs/kaggle-naming-convention.md`](docs/kaggle-naming-convention.md).
-
-| Category | Slug | Title |
+| Collection | Notebooks | Description |
 |---|---|---|
-| `classify-` | `classify-malimg` | Malimg Classification |
-| `classify-` | `classify-breast-cancer` | Breast Cancer Classification |
-| `eda-` | `eda-iris` | Iris EDA |
-| `eda-` | `eda-titanic` | Titanic EDA & Feature Engineering |
-| `eda-` | `eda-housing` | California Housing EDA |
-| `eda-` | `eda-customer-segmentation` | Customer Segmentation EDA |
-| `vision-` | `vision-malevis-generator` | Mini MaleVis Generator |
-| `vision-` | `vision-image-size-check` | Image Size Check |
-| `nlp-` | `nlp-retail-chatbot-rag` | Retail Chatbot RAG |
-| `nlp-` | `nlp-retail-cs-ai` | Retail CS AI |
-| `exp-` | `exp-transformer-mamba` | Transformer Mamba Experiment |
-| `exp-` | `exp-transformer-test` | Transformer Model Test |
-| `auto-` | `auto-github-runner` | GitHub Runner Automation |
+| `AUTOMATION` | `auto-github-runner` | GitHub Runner Automation |
+| `CLASSIFICATION` | `classify-breast-cancer` | Breast Cancer Classification |
+| `COMPUTER-VISION` | `classify-malimg`, `vision-malevis-generator`, `vision-image-size-check` | Malware & Vision |
+| `EDA` | `eda-iris`, `eda-titanic`, `eda-housing`, `eda-customer-segmentation` | Exploratory Data Analysis |
+| `EXPERIMENTS` | `exp-transformer-mamba`, `exp-transformer-test` | Transformer Experiments |
+| `NLP` | `nlp-retail-chatbot-rag`, `nlp-retail-cs-ai` | Retail Chatbot RAG |
 
-### Push notebook ke Kaggle
+Total: **13 notebooks** — semua `is_private: true`, `enable_internet: true`.
+
+## Kaggle Sync
+
+Setiap subfolder memiliki `kernel-metadata.json` (`id: febriyansyahresearch/<slug>`).
+
+### Push ke Kaggle
 
 ```bash
-# Aktifkan venv + token OAuth (kaggle CLI 2.x butuh ini untuk perintah kernels)
-export PATH="/path/ke/.venv/bin:$PATH"
+# Auth (kaggle CLI 2.x)
 export KAGGLE_API_TOKEN=$(kaggle auth print-access-token)
 
 # Push satu notebook
-cd notebooks/eda-iris
+cd COMPUTER-VISION/classify-malimg
 kaggle kernels push
 
-# Push semua notebook
-for d in notebooks/*/; do (cd "$d" && kaggle kernels push); done
+# Push semua notebook (per collection)
+for d in */*/*/; do [ -f "$d/kernel-metadata.json" ] && (cd "$d" && kaggle kernels push); done
+# atau
+find . -name "kernel-metadata.json" -execdir kaggle kernels push \;
 ```
 
 > Catatan: Kaggle membatasi 5 sesi CPU bersamaan — push berurutan dengan jeda bila perlu.
 
-## Setup
+### Pull dari Kaggle
 
 ```bash
-pip install -r requirements.txt
+kaggle kernels pull febriyansyahresearch/eda-iris -p EDA/eda-iris/
+kaggle kernels list --mine
 ```
 
-## Test
+### Collections
 
-```bash
-python -m pytest projects/ -v
-```
+Kaggle Collections hanya via web UI (tidak ada CLI):
+- `https://www.kaggle.com/work/collections/19123799` — Computer Vision
+- Buat collection baru di `Your Work > Collections > New Collection` lalu Add notebook `febriyansyahresearch/<slug>`
 
-## Usage
+## Profile
 
-```bash
-# Iris: train + API
-python -m projects.iris.src.train
-uvicorn projects.iris.src.api:app
-
-# Titanic: train
-python -m projects.titanic.src.train
-
-# Housing: train and compare models
-python -m projects.housing.src.train
-
-# Clustering: run K-Means
-python -m projects.clustering.src.cluster
-```
+- Kaggle: `https://www.kaggle.com/febriyansyahresearch`
+- GitHub: `https://github.com/febriyansyah-id/KAGGLE-WORKSPACE`

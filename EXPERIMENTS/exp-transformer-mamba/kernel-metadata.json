@@ -1,0 +1,12 @@
+{
+  "id": "febriyansyahresearch/exp-transformer-mamba",
+  "title": "Exp Transformer Mamba",
+  "code_file": "exp-transformer-mamba.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "competition_sources": [],
+  "dataset_sources": []
+}

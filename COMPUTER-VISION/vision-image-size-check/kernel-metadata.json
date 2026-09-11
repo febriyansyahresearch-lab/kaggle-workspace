@@ -1,0 +1,12 @@
+{
+  "id": "febriyansyahresearch/vision-image-size-check",
+  "title": "Vision Image Size Check",
+  "code_file": "vision-image-size-check.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "competition_sources": [],
+  "dataset_sources": []
+}

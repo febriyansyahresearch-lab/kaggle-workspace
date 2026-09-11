@@ -1,0 +1,12 @@
+{
+  "id": "febriyansyahresearch/eda-titanic",
+  "title": "EDA Titanic",
+  "code_file": "eda-titanic.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "competition_sources": [],
+  "dataset_sources": []
+}

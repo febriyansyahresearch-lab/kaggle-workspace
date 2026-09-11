@@ -1,9 +1,0 @@
-[build-system]
-requires = ["setuptools>=68.0"]
-build-backend = "setuptools.backends._legacy:_Backend"
-
-[project]
-name = "kaggle-workspace"
-version = "1.0.0"
-description = "Monorepo of ML projects and Kaggle notebooks: Iris (FastAPI), Titanic, Housing, Clustering"
-requires-python = ">=3.10"

@@ -1,0 +1,12 @@
+{
+  "id": "febriyansyahresearch/vision-malevis-generator",
+  "title": "Vision Malevis Generator",
+  "code_file": "vision-malevis-generator.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "competition_sources": [],
+  "dataset_sources": []
+}

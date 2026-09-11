@@ -1,0 +1,12 @@
+{
+  "id": "febriyansyahresearch/nlp-retail-chatbot-rag",
+  "title": "NLP Retail Chatbot RAG",
+  "code_file": "nlp-retail-chatbot-rag.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "competition_sources": [],
+  "dataset_sources": []
+}
