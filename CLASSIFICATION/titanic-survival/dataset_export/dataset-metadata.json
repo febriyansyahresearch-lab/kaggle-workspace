@@ -1,0 +1,20 @@
+{
+  "id": "febriyansyahresearch/titanic-engineered-features",
+  "title": "Titanic with Engineered Features",
+  "subtitle": "Clean Titanic data with engineered features ready for ML",
+  "description": "A clean, ready-to-use version of the classic Titanic dataset with engineered features already applied. Includes Title extraction, FamilySize, IsAlone, Deck, and Fare_log. Perfect for ML learners who want to skip feature engineering and focus on modeling.",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "keywords": [
+    "titanic",
+    "classification",
+    "machine learning",
+    "feature engineering",
+    "beginner",
+    "education"
+  ],
+  "isPrivate": false
+}

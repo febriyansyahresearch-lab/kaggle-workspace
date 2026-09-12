@@ -2,7 +2,7 @@
 
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
-Kumpulan 13 Kaggle notebooks terorganisir per collection (mirror dari Kaggle Collections). Setiap notebook berada di `<COLLECTION>/<slug>/` berisi `<slug>.ipynb` + `kernel-metadata.json`.
+Kumpulan 15 Kaggle notebooks terorganisir per collection (mirror dari Kaggle Collections). Setiap notebook berada di `<COLLECTION>/<slug>/` berisi `<slug>.ipynb` + `kernel-metadata.json`.
 
 ## Structure
 
@@ -12,10 +12,12 @@ NOTEBOOK-KAGGLE/
 │   └── auto-github-runner/
 ├── CLASSIFICATION/       # 1 notebook
 │   └── classify-breast-cancer/
-├── COMPUTER-VISION/      # 3 notebooks (Collection: Computer Vision - 19123799)
+├── COMPUTER-VISION/      # 5 notebooks (Collection: Computer Vision - 19123974)
 │   ├── classify-malimg/
-│   ├── vision-malevis-generator/
-│   └── vision-image-size-check/
+│   ├── p01-introduction-to-computer-vision/
+│   ├── p03-classic-feature-extraction/
+│   ├── vision-image-size-check/
+│   └── vision-malevis-generator/
 ├── EDA/                  # 4 notebooks
 │   ├── eda-iris/
 │   ├── eda-titanic/
@@ -37,12 +39,12 @@ NOTEBOOK-KAGGLE/
 |---|---|---|
 | `AUTOMATION` | `auto-github-runner` | GitHub Runner Automation |
 | `CLASSIFICATION` | `classify-breast-cancer` | Breast Cancer Classification |
-| `COMPUTER-VISION` | `classify-malimg`, `vision-malevis-generator`, `vision-image-size-check` | Malware & Vision |
+| `COMPUTER-VISION` | `classify-malimg`, `p01-introduction-to-computer-vision`, `p03-classic-feature-extraction`, `vision-image-size-check`, `vision-malevis-generator` | Malware & Vision |
 | `EDA` | `eda-iris`, `eda-titanic`, `eda-housing`, `eda-customer-segmentation` | Exploratory Data Analysis |
 | `EXPERIMENTS` | `exp-transformer-mamba`, `exp-transformer-test` | Transformer Experiments |
 | `NLP` | `nlp-retail-chatbot-rag`, `nlp-retail-cs-ai` | Retail Chatbot RAG |
 
-Total: **13 notebooks** — semua `is_private: true`, `enable_internet: true`.
+Total: **15 notebooks** — semua `is_private: false` (public), `enable_internet: true`.
 
 ## Kaggle Sync
 
@@ -76,7 +78,12 @@ kaggle kernels list --mine
 ### Collections
 
 Kaggle Collections hanya via web UI (tidak ada CLI):
-- `https://www.kaggle.com/work/collections/19123799` — Computer Vision
+- `https://www.kaggle.com/work/collections/19123974` — COMPUTER-VISION (5)
+- `https://www.kaggle.com/work/collections/19124099` — AUTOMATION (1)
+- `https://www.kaggle.com/work/collections/19124105` — CLASSIFICATION (1)
+- `https://www.kaggle.com/work/collections/19124109` — EDA (4)
+- `https://www.kaggle.com/work/collections/19124113` — EXPERIMENTS (2)
+- `https://www.kaggle.com/work/collections/19124116` — NLP (2)
 - Buat collection baru di `Your Work > Collections > New Collection` lalu Add notebook `febriyansyahresearch/<slug>`
 
 ## Profile
