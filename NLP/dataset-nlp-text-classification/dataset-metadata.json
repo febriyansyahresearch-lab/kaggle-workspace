@@ -1,0 +1,19 @@
+{
+  "id": "febriyansyahresearch/text-classification-demo",
+  "title": "Text Classification Practice Dataset",
+  "subtitle": "Clean labeled text data for NLP classification practice",
+  "description": "A clean, ready-to-use text classification dataset with text and label columns. Covers finance, tech, and sports categories. Perfect for learning text classification, TF-IDF, word embeddings, and NLP pipelines.",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "keywords": [
+    "nlp",
+    "text classification",
+    "text mining",
+    "education",
+    "natural language processing"
+  ],
+  "isPrivate": false
+}

@@ -1,0 +1,19 @@
+{
+  "id": "febriyansyahresearch/user-item-ratings-demo",
+  "title": "User-Item Ratings for Recommender Systems",
+  "subtitle": "Clean user-item rating data for building recommendation models",
+  "description": "A clean, ready-to-use user-item rating dataset for building and testing recommender systems. Contains user_id, item_id, and rating columns. Perfect for learning collaborative filtering, matrix factorization, and recommendation algorithms.",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "keywords": [
+    "recommender",
+    "collaborative filtering",
+    "ratings",
+    "matrix factorization",
+    "education"
+  ],
+  "isPrivate": false
+}
